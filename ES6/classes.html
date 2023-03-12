@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        //JavaScript Classes are templates for JavaScript Objects.
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const myCar = new Car("Fortuner", 2016);
+        document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year;
+        const myCar1 = new Car("BMW", 2018);
+        document.getElementById("demo1").innerHTML = myCar1.name + " " + myCar1.year;
+    </script>
+</body>
+
+</html>

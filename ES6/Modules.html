@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script type="module">
+        //you can import files so maintainibility of code is less and its done in two ways: 1) named attributes 2)Default messages
+        import { name, age} from "./person.js";
+        let text = "My name" + " is" + " " +  name + " and" + " My" + " age " + " is" + " " + age;
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

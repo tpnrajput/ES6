@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        //1. Array.from method returns an Array object from any object with a length property or any iterable object.
+        const myArr = Array.from("Tapan");
+        document.getElementById("demo").innerHTML = myArr;
+
+        //2. Array.keys() method returns an Array Iterator object with the keys of an array.
+        const Arr = ["Tapan", "Chirag", "Kartik", "Aryan", "pandey"];
+        const keys = Arr.keys();
+        let text = "";
+        for (let x of keys) {
+            text += x + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+
+        //3. Array.find() method returns the value of the first array element that passes a test function.
+        const numbers = [3, 4, 12, 16, 25, 34, 23, 56, 34];
+        let first = numbers.find(myfunction);
+        function myfunction(value, index, array) {
+            return value > 18;
+        }
+        document.getElementById("demo2").innerHTML = first;
+
+        //4. Array.findIndex() method returns the index of the first array element that passes a test function.
+        const numbers1 = [3,4,12,15,34,23,4,5,45];
+        let first1 = numbers1.findIndex(myfunction);
+        function myfunction(value,index,array){
+            return value > 18;
+        }
+        document.getElementById("demo3").innerHTML = first1;  //4
+    </script>
+</body>
+
+</html>

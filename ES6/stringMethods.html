@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        // 1. includes()
+        let text = "hello world my name is Tpn";
+        document.getElementById("demo").innerHTML = text.includes("Tpn"); //true and it is case sensitive(tpn return false).
+
+
+        //2.startsWith()
+        let text1 = "hello world my name is Tpn";
+        document.getElementById("demo1").innerHTML = text.startsWith("Tpn");
+
+        //3. endsWith()
+        let text2 = "hello world my name is Tpn";
+        document.getElementById("demo2").innerHTML = text.endsWith("Tpn"); 
+    </script>
+</body>
+
+</html>

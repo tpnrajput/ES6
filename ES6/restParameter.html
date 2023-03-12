@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter(...)</title>
+</head>
+<body>
+<p id="demo"></p>    
+
+    <script>
+        //The rest parameter (...) allows a function to treat an indefinite number of arguments as an array.
+        function sum(...args){
+            let sum = 0;
+            for(let arg of args)
+                sum += arg;
+                return sum;
+            
+        }
+        let x = sum(23,34,56,45,42,12,89,32,3325463,3233,212,43434,22332,434353,43,434,3434,3,4,3);   
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

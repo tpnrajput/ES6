@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets object</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        //A JavaScript Set is a collection of unique values. Each value can only occur once in a Set.
+
+        //1. new Set()
+        const letters = new Set();
+
+        //2. add()
+        letters.add("a");
+        letters.add("b");
+        letters.add("c");
+        letters.add("d");
+        letters.add("e");
+        document.getElementById("demo").innerHTML = letters;
+
+        //3.delete()
+        letters.delete("e");
+
+
+        //4.size()
+        document.getElementById("demo1").innerHTML = letters.size;
+
+        //5.has()
+        document.getElementById("demo2").innerHTML = letters.has("e");
+
+        //6.forEach()  //It calls a function for each element
+        let text = "";
+        letters.forEach(function (value) {
+            text += value + "<br>";
+        });
+        document.getElementById("demo3").innerHTML = text;
+
+
+        //7.values()  //Iterating set values
+        let text1 = "";
+        for (let x of letters.values()) {
+            text1 += x + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text1;
+    </script>
+</body>
+
+</html>

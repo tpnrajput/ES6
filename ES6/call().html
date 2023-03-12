@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js function call()</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        // With the call() method, you can write a method that can be used on different objects.
+        // Difference between call() and apply():
+        //    The call() method takes arguments separately.
+        //    The apply() method takes arguments as an array.
+        const person = {
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const person1 = {
+            firstName: "Harshit",
+            lastName: "Jadav"
+        }
+        document.getElementById("demo").innerHTML = person.fullName.call(person1);
+
+    </script>
+</body>
+
+</html>

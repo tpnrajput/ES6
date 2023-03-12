@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button class="btn" onclick="this.style.display='none';">Click me!</button>
+    <script>
+        //In JavaScript, the this keyword refers to an object.
+        //this is not a variable. It is a keyword. You cannot change the value of this.
+        //this keyword refers to the global object
+
+        //1. Used in method
+        const person = {
+            firstName: "Tapan",
+            age: 19,
+            id: "20ce027",
+            lastName: "Jadav",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        document.getElementById("demo").innerHTML = person.fullName();
+
+        //2. Used alone
+        let x = this;   //Here this keyword points out to the window object
+        document.getElementById("demo1").innerHTML = x;
+
+        //3.this in a function(strict)  //JavaScript strict mode does not allow default binding.So, when used in a function, in strict mode, this is undefined.
+        "use strict";
+        document.getElementById("demo2").innerHTML = myFunction();
+        function myFunction() {
+            return this;
+        }
+
+        //4.this in event handlers
+        //In that this refers to the HTML element that received the event
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

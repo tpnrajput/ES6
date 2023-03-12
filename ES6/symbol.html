@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Symbol type </title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        // A JavaScript Symbol is a primitive datatype just like Number, String, or Boolean.
+        // It represents a unique "hidden" identifier that no other code can accidentally access.
+        const person = {
+            firstName: "TPN",
+            lastName: "JADAV",
+            age: '19',
+            eyeColor: 'black',
+        }
+
+        let id = Symbol("id");  
+        person[id] = 2325347;
+
+        document.getElementById("demo").innerHTML = person[id] + " " + person.id;   
+
+        // Symbol() is used to create a unique identifiers
+        document.getElementById("demo1").innerHTML = Symbol("id") === Symbol("id");
+    </script>
+</body>
+
+</html>
